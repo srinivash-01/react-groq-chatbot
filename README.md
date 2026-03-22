@@ -1,83 +1,54 @@
-# AI Chat App — React + OpenAI
+# react-ai-chat
 
-A production-ready AI chat application built with React and OpenAI's streaming API.
+A chat app I built using React and Groq API. Works like ChatGPT — streaming responses, multiple chats, system prompt editor.
 
-## Features
+## What it does
 
-- **Streaming responses** — text appears word by word like ChatGPT
-- **Multiple conversations** — sidebar with chat history, auto-titled
-- **System prompt editor** — change AI personality with presets (React Dev, Code Reviewer, etc.)
-- **API key stored in browser** — no backend needed, fully client-side
-- **Code block rendering** — syntax-highlighted code in responses
-- **Stop generation** — cancel streaming mid-response
-- **Auto-resize input** — textarea grows as you type
+- Chat with AI — responses stream word by word
+- Multiple conversations in the sidebar
+- Edit the system prompt to change how the AI behaves
+- API key saved in browser — no backend, no server
+- Stop the response mid-way
+- Code blocks are formatted properly in replies
 
-## Tech Stack
+## Tech used
 
 - React 18
 - Vite
-- OpenAI API (gpt-4o-mini — cheapest, fastest model)
-- Deployed on Vercel (free)
+- Groq API (free — no billing needed)
+- Deployed on Vercel
 
-## Setup
-
-### 1. Install dependencies
+## How to run
 
 ```bash
 npm install
-```
-
-### 2. Run locally
-
-```bash
 npm run dev
 ```
 
-Open http://localhost:5173
+Opens at http://localhost:5173
 
-### 3. Add your OpenAI API Key
+## API Key
 
-- Go to https://platform.openai.com/api-keys
-- Create a new key
-- Click "Add API Key" in the app sidebar
-- Key is stored in localStorage (browser only, never sent anywhere else)
+I used Groq instead of OpenAI — it's completely free.
 
-### 4. Deploy to Vercel (free)
+Get your key here → https://console.groq.com/keys
 
-```bash
-npm install -g vercel
-vercel
-```
+Once you have it, click **Add API Key** in the sidebar and paste it. It saves in your browser.
 
-Or push to GitHub and connect to https://vercel.com — auto-deploys on every push.
+## Deploy
 
-## Cost
+Push to GitHub → connect to https://vercel.com → it deploys automatically.
 
-- **React + Vite** — free, open source
-- **Vercel hosting** — free for personal projects
-- **OpenAI API** — gpt-4o-mini costs ~$0.00015 per 1K tokens
-  - A normal conversation of 20 messages costs less than ₹0.10
-  - New accounts get $5 free credit = thousands of messages for free
-
-## Project Structure
+## Folder structure
 
 ```
 src/
-├── App.jsx                    # Main app, state management, API calls
-├── index.css                  # Global styles
-├── main.jsx                   # Entry point
+├── App.jsx
+├── index.css
+├── main.jsx
 └── components/
-    ├── ChatWindow.jsx          # Message list with streaming cursor
-    ├── InputBar.jsx            # Auto-resize textarea + send/stop button
-    ├── Sidebar.jsx             # Conversation history + actions
-    └── SystemPromptModal.jsx   # System prompt editor with presets
+    ├── ChatWindow.jsx
+    ├── InputBar.jsx
+    ├── Sidebar.jsx
+    └── SystemPromptModal.jsx
 ```
-
-## What this demonstrates (for your resume)
-
-- OpenAI API integration with streaming (SSE)
-- React state management across components
-- Custom hooks pattern
-- Real-time UI updates
-- localStorage for persistence
-- Production deployment on Vercel
