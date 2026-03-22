@@ -4,7 +4,8 @@ A chat app I built using React and Groq API. Works like ChatGPT — streaming re
 
 **Live demo →** https://react-groq-chatbot-ktqlhl2wo-srinivashs-projects-9adb990c.vercel.app/
 
-![screenshot](./screenshot.png)
+<img width="960" height="600" alt="screenshot" src="https://github.com/user-attachments/assets/dfe39ce2-c99e-4a2a-9771-42abdfb23a47" />
+
 
 ## What it does
 
@@ -62,6 +63,3 @@ src/
     ├── Sidebar.jsx
     └── SystemPromptModal.jsx
 ```
-
-
-<img width="960" height="600" alt="screenshot" src="https://github.com/user-attachments/assets/09feeeb7-c826-4bad-ac92-8f08acddaf25" />
