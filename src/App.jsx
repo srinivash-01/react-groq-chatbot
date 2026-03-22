@@ -15,8 +15,8 @@ export default function App() {
   const [systemPrompt, setSystemPrompt] = useState(DEFAULT_SYSTEM_PROMPT)
   const [showSystemModal, setShowSystemModal] = useState(false)
   const [apiKey, setApiKey] = useState(
-    () => localStorage.getItem('openai_key') || ''
-  )
+  () => import.meta.env.VITE_GROQ_API_KEY || localStorage.getItem('openai_key') || ''
+)
   const [showKeyInput, setShowKeyInput] = useState(false)
   const [streaming, setStreaming] = useState(false)
   const abortRef = useRef(null)
